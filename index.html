@@ -29,6 +29,35 @@
       line-height: 1.6;
     }
 
+    /* 固定ヘッダーで隠れないようにアンカー位置をずらす */
+#about,
+#services,
+#insights,
+#contact {
+  scroll-margin-top: 80px;  /* ヘッダーの高さに合わせて調整。70〜90の間で微調整OK */
+}
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header h1 {
+    text-align: center;
+    width: 100%;
+    margin: 0 0 4px;   /* ← これで問題なし */
+  }
+
+  header nav {
+    margin-top: 4px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
     a {
       color: var(--tgms-accent);
       text-decoration: none;
