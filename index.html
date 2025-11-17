@@ -45,6 +45,18 @@
       top: 0;
       z-index: 10;
     }
+/* stickyヘッダーで隠れないように、見えない「段差」を作る */
+#about::before,
+#services::before,
+#insights::before,
+#contact::before {
+  content: "";
+  display: block;
+  height: 120px;     /* ヘッダーの高さ＋少し余裕 */
+  margin-top: -120px;
+  visibility: hidden;
+  pointer-events: none;
+}
 
     .nav-inner {
       max-width: var(--tgms-max-width);
