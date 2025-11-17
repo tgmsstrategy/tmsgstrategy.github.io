@@ -6,7 +6,7 @@
   <title>Tomura Global Mobility Strategy (TGMS)</title>
   <meta name="description" content="Tomura Global Mobility Strategy (TGMS) – Automotive market entry & localization advisory specializing in ASEAN and Japan.">
 
-  <style>
+   <style>
     :root {
       --tgms-blue: #003366;
       --tgms-light: #f5f7fa;
@@ -28,35 +28,6 @@
       background-color: #ffffff;
       line-height: 1.6;
     }
-
-    /* 固定ヘッダーで隠れないようにアンカー位置をずらす */
-#about,
-#services,
-#insights,
-#contact {
-  scroll-margin-top: 80px;  /* ヘッダーの高さに合わせて調整。70〜90の間で微調整OK */
-}
-@media (max-width: 768px) {
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  header h1 {
-    text-align: center;
-    width: 100%;
-    margin: 0 0 4px;   /* ← これで問題なし */
-  }
-
-  header nav {
-    margin-top: 4px;
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-}
 
     a {
       color: var(--tgms-accent);
@@ -110,10 +81,11 @@
       padding: 32px 16px 40px;
     }
 
+    /* 各セクションがヘッダーに隠れないようにする */
     .section {
       max-width: var(--tgms-max-width);
       margin: 0 auto 40px;
-      scroll-margin-top: 90px;
+      scroll-margin-top: 110px;  /* sticky ヘッダー分を確実にあける */
     }
 
     .section-title {
@@ -349,14 +321,17 @@
 
     /* ---------- MOBILE ---------- */
     @media (max-width: 768px) {
+      /* ヘッダーやナビを中央寄せに */
       .nav-inner {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 8px;
+        text-align: center;
       }
 
       nav ul {
         flex-wrap: wrap;
+        justify-content: center;
       }
 
       .hero {
@@ -367,11 +342,13 @@
         grid-template-columns: 1fr;
       }
 
+      /* モバイルでも十分な余白をとる */
       .section {
-        scroll-margin-top: 70px;
+        scroll-margin-top: 110px;
       }
     }
   </style>
+
 </head>
 
 <body>
