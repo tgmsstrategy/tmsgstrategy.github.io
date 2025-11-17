@@ -6,7 +6,7 @@
   <title>Tomura Global Mobility Strategy (TGMS)</title>
   <meta name="description" content="Tomura Global Mobility Strategy (TGMS) – Automotive market entry & localization advisory specializing in ASEAN and Japan.">
 
-   <style>
+  <style>
     :root {
       --tgms-blue: #003366;
       --tgms-light: #f5f7fa;
@@ -41,22 +41,7 @@
       background: linear-gradient(135deg, var(--tgms-blue), #001a33);
       color: white;
       padding: 16px 24px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
     }
-/* stickyヘッダーで隠れないように、見えない「段差」を作る */
-#about::before,
-#services::before,
-#insights::before,
-#contact::before {
-  content: "";
-  display: block;
-  height: 120px;     /* ヘッダーの高さ＋少し余裕 */
-  margin-top: -120px;
-  visibility: hidden;
-  pointer-events: none;
-}
 
     .nav-inner {
       max-width: var(--tgms-max-width);
@@ -93,11 +78,9 @@
       padding: 32px 16px 40px;
     }
 
-    /* 各セクションがヘッダーに隠れないようにする */
     .section {
       max-width: var(--tgms-max-width);
       margin: 0 auto 40px;
-      scroll-margin-top: 110px;  /* sticky ヘッダー分を確実にあける */
     }
 
     .section-title {
@@ -333,7 +316,6 @@
 
     /* ---------- MOBILE ---------- */
     @media (max-width: 768px) {
-      /* ヘッダーやナビを中央寄せに */
       .nav-inner {
         flex-direction: column;
         align-items: center;
@@ -353,14 +335,8 @@
       .contact-wrapper {
         grid-template-columns: 1fr;
       }
-
-      /* モバイルでも十分な余白をとる */
-      .section {
-        scroll-margin-top: 110px;
-      }
     }
   </style>
-
 </head>
 
 <body>
